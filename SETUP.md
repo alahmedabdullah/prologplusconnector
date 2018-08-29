@@ -1,5 +1,5 @@
-CHARLIE Connector
-=================
+PROLOGPLUS Smart Connector
+==========================
 
 Setup
 -----
