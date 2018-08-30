@@ -48,6 +48,9 @@ for dl_url in ${jdk_download_url4[@]}; do
 done
 JAVA_TARBALL=$(basename $dl_url)
 tar xzfv $JAVA_TARBALL
+java_exe=$(whereis java 2>&1 | awk '/java/ {print $2}')
+java_path=$(dirname $java_exe)
+export PATH=$PATH:$java_path
 cd /opt/charlie
 tar -zxvf $CHARLIE_PACKAGE_NAME
 cd $WORK_DIR
